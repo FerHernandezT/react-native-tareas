@@ -21,7 +21,6 @@ class DetalleTarea extends Component {
         };
     
         this.params = state.params;
-        console.log("PROPS", JSON.stringify(this.params))
     }
 
     alertUpgradeTarea(){
@@ -64,8 +63,7 @@ class DetalleTarea extends Component {
             tarea: tarea,
             modalVisible: !this.state.modalVisible,
         })
-        console.log("NEW-TAREA", tarea);
-        console.log("NEW-DATA", this.state.titulo, this.state.descripcion);
+        
         this.props.update_tarea(tarea);
     }
     upgradeTarea(){

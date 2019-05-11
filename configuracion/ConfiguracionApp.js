@@ -1,7 +1,14 @@
 module.exports={
+    IMAGEN_BACKGROUND:{
+        IMAGEN:require('./../images/fondo.png'),
+        COLOR_RGBA:'rgba(22, 232, 204, 0.9)',
+    },
     LOGO:{
         IMAGEN:require('./../images/logo.png'),
-        SIZE:75
+        SIZE:75,
+        RADIUS: false,
+        TITLE:'Notas',
+        DESCRIPCION:'no olvides las ideas \n que pueden cambiar el futuro de tu vida.',
     },
 
     CARD_COLOR:'#FFF',

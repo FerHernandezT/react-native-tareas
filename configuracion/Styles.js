@@ -7,6 +7,12 @@ const styles = StyleSheet.create({
     width: window.width,
     height: window.height
     },
+    //IMAGE_BACKGROUND
+    container_image:{
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain',
+    },
 
     inputMedio:{
         alignItems:'flex-end',
@@ -269,8 +275,9 @@ const styles = StyleSheet.create({
     ///////////////////////////////////////////////////////////////
 
     imgLogo:{
+        resizeMode: 'contain',
         width: ConfiguracionApp.LOGO.SIZE * 2,
-        height: ConfiguracionApp.LOGO.SIZE * 2,
+        //height: ConfiguracionApp.LOGO.SIZE * 2,
         //borderRadius: ConfiguracionApp.LOGO.SIZE,
     },
 

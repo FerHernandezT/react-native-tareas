@@ -32,7 +32,7 @@ class Tareas extends Component {
     getTareas(){
         AsyncStorage.getItem("Tareas").then((value) => {
             if (value !== null) {
-              console.log("VALUE", value);
+              //console.log("VALUE", value);
               let lista = JSON.parse(value);
 
               this.props.load_tareas(lista);
@@ -112,9 +112,8 @@ class Tareas extends Component {
     }
 
     render(){
-        console.log("TAB-PROPS", JSON.stringify(this.props));
         return(
-            <View>
+            <Container>
                 <Header 
                     title='TAREAS'
                     navigation={this.props.navigation}
@@ -125,7 +124,7 @@ class Tareas extends Component {
                 />
                 <TareasList navigation={this.props.navigation} />
                 {this.modal()}
-            </View>
+            </Container>
         )
     }
 }

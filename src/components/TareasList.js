@@ -42,11 +42,9 @@ class TareasList extends Component {
     }
 
     sortData(array){
-        console.log("ESTADO", this.state);
         array = JSON.parse(JSON.stringify(array));
         if(!this.state.fecha && !this.state.estado) return array;
         if(this.state.fecha){
-            console.log("ORDEN-FECHA");
             array.sort(function (a, b) {
                 
                 if (parseInt(a.id) < parseInt(b.id)) return 1;
@@ -55,7 +53,6 @@ class TareasList extends Component {
             });
         }
         if(this.state.estado){
-            console.log("ORDEN-STADO");
             array.sort(function (a, b) {
                 if (a.estado > b.estado) return 1;
                 if (a.estado < b.estado) return -1;
@@ -72,7 +69,7 @@ class TareasList extends Component {
 
 
         return(
-            <View style={{marginTop: 5}}>
+            <View style={{marginTop: 5, flex:1}}>
                 <View style={[styles.row, styles.between]}>
                     <View style={{flex:1}}>
                         <Button iconRight full light={(this.state.fecha)? false : true} onPress={()=> this.onFilter('fecha')}>
@@ -105,7 +102,7 @@ class TareasList extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log("mapStateToProps", JSON.stringify(state));
+    //console.log("mapStateToProps", JSON.stringify(state));
     if(state.tareas.length) storeTareas(state.tareas);
     return {
         tareas: state.tareas, //INDEX DE REDUCERS
