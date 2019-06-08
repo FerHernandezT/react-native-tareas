@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, Alert, Modal, AsyncStorage } from "react-native";
+import { View, Alert, Modal } from "react-native";
+import AsyncStorage from '@react-native-community/async-storage';
 import { Icon, Content, Button, Form, Item, Label, Text, Container, Title} from 'native-base';
 
 import TareasList from "./../components/TareasList";

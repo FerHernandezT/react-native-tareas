@@ -11,10 +11,10 @@ import {
   Platform,
   Text,
   View,
-  AsyncStorage,
   TouchableHighlight,
   TouchableNativeFeedback,
 } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import Reducers from './reducers'
